@@ -11,7 +11,7 @@
 | GAONGNENG GNB LiHV 2s | 7.6V 300mAh 80C XT30 | nieuw | 5.36 | €/stuk | 1 | €6.21 |
 | ESP32 Wi-Fi en Bluetooth Board - CP2102|microcontroller | nieuw | 9 | €/stuk | 1 | €9.00 |
 | DC-DC Step-down Buck Converter | 3A - 3.3V output | nieuw | 3 | €/stuk | 1 | €3.00 |
-| TB6612FNG | Easy Motor Driver | 1 | 7 | €/stuk | nieuw | €7.00 |
+| TB6612FNG | Easy Motor Driver | nieuw | 7 | €/stuk | 1 | €7.00 |
 | 8x IR Lijn Tracking Module | 40mm Bereik | nieuw | 3.5 | €/stuk | 1 | €5 |
 | chasis | 3D print.zie /mechanisch |nieuw  |  |  |  |  |
 | Experimenteer printplaat | 5 x 7 cm | recup | 0.65 | €/stuk | 1 | €0.65 |

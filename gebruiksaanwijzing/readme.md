@@ -1,89 +1,191 @@
-# Gebruiksaanwijzing
+# Gebruiksaanwijzing LineFollow Robot
 
-### opladen / vervangen batterijen
-De robot gebruikt een LiPo HV 2S batterij met een volledige spanning van 8.7 V. Dit type batterij vereist uiterste voorzichtigheid.
-GEVAAR! LiPo-batterijen zijn zeer brandgevaarlijk bij onjuist gebruik of beschadiging.
+Deze pagina beschrijft hoe je de LineFollow Robot veilig gebruikt, verbindt met de applicatie, kalibreert en instelt.
 
-Gebruik enkel de juiste, door de fabrikant gespecificeerde LiPo-lader.
-Laad de batterij altijd op met de individuele cel-balansdraad aangesloten om overladen en celonbalans te voorkomen.
-Zorg dat de batterij fysiek is losgekoppeld van de robot tijdens het opladen.
-De robot en de USB poort van uw computer kan niet tegelijk de USB en de batterij aan doe dit nooit!
+---
 
-### draadloze communicatie
-#### verbinding maken
-De robot communiceert via Bluetooth met de GUI, waardoor er geen handmatige commando's nodig zijn. Verbinding Maken / Verbreken Actie Procedure Verbinden
+## 1. Batterij opladen en vervangen
 
-Zorg dat de robot is ingeschakeld (batterij aangesloten).
-Open de app en ga naar de Connectie Tab.
-Druk op de knop Verbinden. De app zal de status 'Verbonden' weergeven.
-Verbreken De verbinding wordt verbroken door:
+De robot gebruikt een LiPo HV 2S-batterij met een volledig geladen spanning van 8,7 V.
 
-In de app op Verbreken te drukken.
-De applicatie te sluiten.
-De batterij fysiek uit de robot te halen.
+> ⚠️ GEVAAR: LiPo-batterijen kunnen zeer brandgevaarlijk zijn bij verkeerd gebruik of beschadiging.
 
-De Vier Applicatie Tabs
+### Belangrijke veiligheidsregels
 
-1.Connectie Tab
+- Gebruik enkel een geschikte LiPo-lader die door de fabrikant wordt aanbevolen.
+- Laad de batterij altijd op met de balansstekker aangesloten.
+- Hierdoor worden de afzonderlijke cellen correct geladen en wordt celonbalans vermeden.
+- Koppel de batterij altijd fysiek los van de robot tijdens het opladen.
+- Sluit nooit gelijktijdig de batterij en de USB-kabel van de computer aan op de robot.
 
-Toont de huidige verbindingsstatus en bevat de knoppen Verbinden en Verbreken.
+### Robot inschakelen
 
-2. Sensoren Tab
-3. 
-Deze tab geeft de live data van de lijnsensoren weer via een visualisatie in de vorm van een balkgrafiek.
+De robot wordt ingeschakeld door de batterij aan te sluiten.
 
-4. settings tab
-   
-Deze tab is bedoeld voor het configureren van de robotparameters.
-  Start: Start de automatische lijnvolgroutine (PID-controle).
-  Stop: Stopt de robot onmiddellijk en schakelt de PID-lus uit.
-  Parameters: 
-  de Basis Snelheid (0-255), 
-  
-  de PID-parameters (Kp, Ki, Kd) 
-  
-  het minimaal contrast tussen zwart en wit wanneer de robot uitvalt en
-  
-  de loogdaarlaatfilter op de position.
-  
-  Testmodus (ZQSD): Dit biedt de mogelijkheid om de motoren manueel te testen en besturen met de ZQSD-toetsen (of vergelijkbare controls).
+### Robot uitschakelen
 
-  Belangrijk: Manuele besturing is alleen mogelijk wanneer u in deze tab bent. Dit is handig om de robot na lijnverlies snel en handmatig terug op de lijn te plaatsen.
-  
-5. plot tab
+Koppel de batterij fysiek los van de robot.
 
-Deze tab dient voor het analyseren van de prestaties na een run.
+---
 
+## 2. Draadloze communicatie
 
-### kalibratie
-Kalibratie is het proces waarbij de sensorwaarden softwarematig worden genormaliseerd. Dit zorgt ervoor dat de robot de maximale contrastinformatie tussen de witte ondergrond en de zwarte lijn benut, en maakt de sensoren onderling gelijk. Stappenplan
+De robot communiceert via Bluetooth met de bijbehorende GUI-applicatie.
 
-Installeer de App: Ga naar de Connectie Tab en verbind met de robot.
+Hierdoor zijn geen handmatige seriële commando's nodig.
 
-Kalibratie WIT (Minimale Waarden):
+### Verbinding maken
 
-    Plaatsing: Plaats de robot op de witte achtergrond van het parcours dat u gaat gebruiken.
+1. Zorg dat de robot is ingeschakeld en de batterij aangesloten is.
+2. Open de applicatie.
+3. Ga naar de Connectie Tab.
+4. Druk op Verbinden.
+5. Wanneer de verbinding gelukt is, geeft de applicatie de status Verbonden weer.
 
-    Controle: Ga naar de Sensoren Tab en controleer of alle sensorbalken een lage waarde (bijna allemaal 'wit') aangeven.
+### Verbinding verbreken
 
-    Uitvoeren: Druk op de knop Kalibreer WIT.
+De Bluetoothverbinding kan op verschillende manieren worden verbroken:
 
-Kalibratie ZWART (Maximale Waarden):
+- Druk in de applicatie op Verbreken.
+- Sluit de applicatie.
+- Koppel de batterij los van de robot.
 
-    Plaatsing: Plaats de robot met de sensoren direct op de zwarte lijn van het parcours.
+---
 
-    Controle: Ga naar de Sensoren Tab en controleer of alle sensorbalken een hoge waarde (bijna allemaal 'zwart') aangeven.
+## 3. Applicatie
 
-    Uitvoeren: Druk op de knop Kalibreer ZWART.
-Let op: Het is cruciaal dat u deze stappen uitvoert op de exacte materialen (wit/zwart) die u tijdens de run zult gebruiken.
-Aanbevolen Parameters
+De applicatie bestaat uit vier tabs.
 
-De robot rijdt stabiel met de volgende parameters:
+### 3.1 Connectie Tab
 
-Kp 7
+De Connectie Tab wordt gebruikt om de Bluetoothverbinding met de robot te beheren.
 
-Ki 0
+Beschikbare functies:
 
-Kd 0
+- Verbinden
+- Verbreken
+- Weergave van de huidige verbindingsstatus
 
-Speed 140 De basissnelheid van de robot.
+---
+
+### 3.2 Sensoren Tab
+
+De Sensoren Tab toont de live waarden van de lijnsensoren.
+
+De sensorwaarden worden weergegeven in de vorm van een balkgrafiek.
+
+Hierdoor kan eenvoudig gecontroleerd worden:
+
+- welke sensoren wit detecteren;
+- welke sensoren zwart detecteren;
+- of alle sensoren correct functioneren;
+- of de kalibratie correct is uitgevoerd.
+
+Vanuit deze tab kan ook de kalibratie van wit en zwart worden uitgevoerd.
+
+---
+
+### 3.3 Settings Tab
+
+De Settings Tab wordt gebruikt om de robot te starten, stoppen en configureren.
+
+#### Start
+
+Met Start wordt de automatische lijnvolgroutine gestart.
+
+De robot gebruikt hierbij de PID-regeling om de zwarte lijn te volgen.
+
+#### Stop
+
+Met Stop wordt de robot onmiddellijk gestopt en wordt de PID-regeling uitgeschakeld.
+
+#### Parameters
+
+| Parameter | Functie |
+|---|---|
+| Basis Snelheid | Basissnelheid van de robot, tussen 0 en 255 |
+| Kp | Proportionele parameter van de PID-regelaar |
+| Ki | Integrerende parameter van de PID-regelaar |
+| Kd | Differentiërende parameter van de PID-regelaar |
+| Minimaal contrast | Minimaal verschil tussen zwart en wit voordat de robot de lijn als verloren beschouwt |
+| Laagdoorlaatfilter | Filter op de berekende positie van de lijn |
+
+#### Testmodus – ZQSD
+
+De robot kan vanuit de Settings Tab ook manueel worden bestuurd met de ZQSD-toetsen.
+
+Hiermee kunnen de motoren afzonderlijk getest en bediend worden.
+
+De testmodus is onder andere handig om:
+
+- de motoren te controleren;
+- de draairichting te controleren;
+- de robot handmatig te verplaatsen;
+- de robot na lijnverlies opnieuw op de lijn te plaatsen.
+
+> Belangrijk: manuele besturing is enkel mogelijk wanneer de gebruiker zich in de Settings Tab bevindt.
+
+---
+
+### 3.4 Plot Tab
+
+De Plot Tab wordt gebruikt om de prestaties van de robot na een run te analyseren.
+
+Hier kunnen de geregistreerde gegevens van een uitgevoerde run bekeken worden.
+
+De grafieken kunnen gebruikt worden om het gedrag van de robot en de PID-regeling te beoordelen.
+
+---
+
+## 4. Kalibratie
+
+Kalibratie is het proces waarbij de sensorwaarden softwarematig worden genormaliseerd.
+
+Het doel hiervan is:
+
+- een zo groot mogelijk onderscheid te verkrijgen tussen wit en zwart;
+- verschillen tussen de individuele sensoren te compenseren;
+- een betrouwbare lijnpositie te kunnen berekenen.
+
+> ⚠️ Belangrijk: voer de kalibratie uit op hetzelfde witte en zwarte materiaal dat ook tijdens de uiteindelijke run gebruikt wordt.
+
+### 4.1 Verbinding maken
+
+1. Schakel de robot in.
+2. Open de applicatie.
+3. Ga naar de Connectie Tab.
+4. Verbind met de robot.
+5. Ga daarna naar de Sensoren Tab.
+
+### 4.2 Kalibratie WIT
+
+1. Plaats de robot zodat alle sensoren boven de witte achtergrond van het parcours staan.
+2. Controleer in de Sensoren Tab of de sensorbalken een lage waarde weergeven.
+3. Druk op Kalibreer WIT.
+
+De gemeten waarden worden gebruikt als referentiewaarden voor wit.
+
+### 4.3 Kalibratie ZWART
+
+1. Plaats de robot zodat de sensoren boven de zwarte lijn staan.
+2. Controleer in de Sensoren Tab of de sensorbalken een hoge waarde weergeven.
+3. Druk op Kalibreer ZWART.
+
+De gemeten waarden worden gebruikt als referentiewaarden voor zwart.
+
+---
+
+## 5. Aanbevolen instellingen
+
+De robot rijdt stabiel met volgende parameters:
+
+| Parameter | Waarde |
+|---|---:|
+| Kp | 7 |
+| Ki | 0 |
+| Kd | 0 |
+| Speed | 140 |
+
+Speed 140 is de basissnelheid van de robot.
+
+Deze waarden kunnen verder worden aangepast afhankelijk van het parcours en het gewenste rijgedrag.

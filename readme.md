@@ -2,26 +2,26 @@
 
 lege repository die je als template kan gebruiken om een eigen repository te starten voor uw linefollower project
 
-![A description of my image](images/empty.png)
+
 
   
 ## specifications
 
-microcontroller:
+microcontroller: ESP32 Wi-Fi en Bluetooth Board - CP2102
 
-motors: 
+motors: Aslong JGA12-N20-30 DC-Transmissiemotor 6V - 500RPM
 
-h-bridge:
+h-bridge:TB6612FNG Easy Motor Driver
 
-sensors:
+sensors: 8x IR Lijn Tracking Module
 
-batteries:
+batteries: GAONGNENG GNB LiHV 2s
 
-wireless communication:
+wireless communication: bleutooth
 
-distance sensor - motors:
+distance sensor - motors: 90mm
 
-weight:
+weight: 150G
 
-speed: 
+speed: /
 

@@ -25,10 +25,15 @@ De batterij fysiek uit de robot te halen.
 De Vier Applicatie Tabs
 
 1.Connectie Tab
-Toont de huidige verbindingsstatus en bevat de knoppen Verbinden en Verbreken. 
+
+Toont de huidige verbindingsstatus en bevat de knoppen Verbinden en Verbreken.
+
 2. Sensoren Tab
+3. 
 Deze tab geeft de live data van de lijnsensoren weer via een visualisatie in de vorm van een balkgrafiek.
-3. settings tab
+
+4. settings tab
+   
 Deze tab is bedoeld voor het configureren van de robotparameters.
   Start: Start de automatische lijnvolgroutine (PID-controle).
   Stop: Stopt de robot onmiddellijk en schakelt de PID-lus uit.
@@ -44,7 +49,9 @@ Deze tab is bedoeld voor het configureren van de robotparameters.
   Testmodus (ZQSD): Dit biedt de mogelijkheid om de motoren manueel te testen en besturen met de ZQSD-toetsen (of vergelijkbare controls).
 
   Belangrijk: Manuele besturing is alleen mogelijk wanneer u in deze tab bent. Dit is handig om de robot na lijnverlies snel en handmatig terug op de lijn te plaatsen.
+  
 5. plot tab
+
 Deze tab dient voor het analyseren van de prestaties na een run.
 
 
